@@ -25,31 +25,31 @@ return [
                 SwooleEvent::ON_REQUEST => [Hyperf\HttpServer\Server::class, 'onRequest'],
             ],
         ],
-        [
-            'name' => 'ws',
-            'type' => Server::SERVER_WEBSOCKET,
-            'host' => '0.0.0.0',
-            'port' => 9502,
-            'sock_type' => SWOOLE_SOCK_TCP,
-            'callbacks' => [
-                SwooleEvent::ON_HAND_SHAKE => [Hyperf\WebSocketServer\Server::class, 'onHandShake'],
-                SwooleEvent::ON_MESSAGE => [Hyperf\WebSocketServer\Server::class, 'onMessage'],
-                SwooleEvent::ON_CLOSE => [Hyperf\WebSocketServer\Server::class, 'onClose'],
-            ],
-        ],
-        // config/autoload/server.php
-        [
-            'name' => 'socket-io',
-            'type' => Server::SERVER_WEBSOCKET,
-            'host' => '0.0.0.0',
-            'port' => 9503,
-            'sock_type' => SWOOLE_SOCK_TCP,
-            'callbacks' => [
-                SwooleEvent::ON_HAND_SHAKE => [Hyperf\WebSocketServer\Server::class, 'onHandShake'],
-                SwooleEvent::ON_MESSAGE => [Hyperf\WebSocketServer\Server::class, 'onMessage'],
-                SwooleEvent::ON_CLOSE => [Hyperf\WebSocketServer\Server::class, 'onClose'],
-            ],
-        ],
+//        [
+//            'name' => 'ws',
+//            'type' => Server::SERVER_WEBSOCKET,
+//            'host' => '0.0.0.0',
+//            'port' => 9505,
+//            'sock_type' => SWOOLE_SOCK_TCP,
+//            'callbacks' => [
+//                SwooleEvent::ON_HAND_SHAKE => [Hyperf\WebSocketServer\Server::class, 'onHandShake'],
+//                SwooleEvent::ON_MESSAGE => [Hyperf\WebSocketServer\Server::class, 'onMessage'],
+//                SwooleEvent::ON_CLOSE => [Hyperf\WebSocketServer\Server::class, 'onClose'],
+//            ],
+//        ],
+//        // config/autoload/server.php
+//        [
+//            'name' => 'socket-io',
+//            'type' => Server::SERVER_WEBSOCKET,
+//            'host' => '0.0.0.0',
+//            'port' => 9506,
+//            'sock_type' => SWOOLE_SOCK_TCP,
+//            'callbacks' => [
+//                SwooleEvent::ON_HAND_SHAKE => [Hyperf\WebSocketServer\Server::class, 'onHandShake'],
+//                SwooleEvent::ON_MESSAGE => [Hyperf\WebSocketServer\Server::class, 'onMessage'],
+//                SwooleEvent::ON_CLOSE => [Hyperf\WebSocketServer\Server::class, 'onClose'],
+//            ],
+//        ],
 
     ],
     'settings' => [

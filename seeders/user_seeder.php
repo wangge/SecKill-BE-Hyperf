@@ -13,7 +13,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        for($i=1;$i<10;$i++){
+        for($i=1;$i<=1000;$i++){
             User::create([
                 'username' =>"master{$i}",
                 'passwd' => hash("md5", "123456")

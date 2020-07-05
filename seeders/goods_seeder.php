@@ -13,11 +13,14 @@ class GoodsSeeder extends Seeder
      */
     public function run()
     {
-        Good::create([
-            'goods_name' => 'iphone 11 pro',
-            'price'  => 19900,
-            'store'  => 100,
-            'start_at' => date("Y-m-d"). " 18:00:00"
-        ]);
+        for($i=1;$i<10;$i++){
+            Good::create([
+                'goods_name' => 'iphone 11 pro max'.$i,
+                'price'  => 199,
+                'store'  => rand(200,500),
+                'start_at' => date("Y-m-d"). " 18:00:00"
+            ]);
+        }
+
     }
 }
